@@ -53,20 +53,20 @@ val roomVersion = "2.7.2"
 val camerax_version = "1.1.0"
 
 dependencies {
-    // ✅ ROOM
+    // ROOM
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation(libs.room.runtime.android)
     kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
 
-    // ✅ CAMERA / MLKit
+    // CAMERA / MLKit
     implementation("androidx.camera:camera-core:$camerax_version")
     implementation("androidx.camera:camera-camera2:$camerax_version")
     implementation("androidx.camera:camera-lifecycle:$camerax_version")
     implementation("androidx.camera:camera-view:1.0.0-alpha27")
     implementation("com.google.mlkit:pose-detection:17.0.0")
 
-    // ✅ AndroidX + Compose
+    // AndroidX + Compose
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -78,11 +78,11 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.appcompat)
 
-    // ✅ UI debugging/testing
+    // UI debugging/testing
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // ✅ Testing
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
