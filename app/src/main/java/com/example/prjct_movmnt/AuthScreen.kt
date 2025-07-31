@@ -16,7 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.prjct_movmnt.R // Assuming your app icon is in res/drawable
+import com.example.prjct_movmnt.R 
 
 @Composable
 fun AuthScreen(
@@ -30,23 +30,22 @@ fun AuthScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(32.dp), // Increased padding for more space
+                .padding(32.dp), 
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // App Icon or Logo
-            val appIconPainter: Painter = painterResource(id = R.drawable.ic_launcher_foreground) // Replace with your actual app icon
+            val appIconPainter: Painter = painterResource(id = R.drawable.ic_launcher_foreground) 
             Image(
                 painter = appIconPainter,
                 contentDescription = "App Logo",
                 modifier = Modifier
-                    .size(150.dp) // Adjust size as needed
+                    .size(150.dp) 
                     .padding(bottom = 48.dp),
                 contentScale = ContentScale.Fit
             )
 
             Text(
-                text = "Welcome!", // Or your app's tagline
+                text = "Welcome!",
                 style = MaterialTheme.typography.headlineMedium,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
@@ -67,7 +66,7 @@ fun AuthScreen(
                 Text("Login", fontSize = 16.sp)
             }
 
-            OutlinedButton( // Using OutlinedButton for a secondary action style
+            OutlinedButton( 
                 onClick = onRegisterClick,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -81,10 +80,8 @@ fun AuthScreen(
 @Preview(showBackground = true, widthDp = 320, heightDp = 640)
 @Composable
 fun AuthScreenPreview() {
-    // Wrap with your app's theme for accurate preview
-    // PrjctMovmntTheme {
+
     AuthScreen(onLoginClick = {}, onRegisterClick = {})
-    // }
 }
 
 
