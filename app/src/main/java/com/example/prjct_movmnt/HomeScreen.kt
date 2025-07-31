@@ -14,7 +14,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.prjct_movmnt.R // Assuming your app icon is in res/drawable
+import com.example.prjct_movmnt.R 
 
 @Composable
 fun HomeScreen(onStartTestClick: () -> Unit) {
@@ -29,13 +29,13 @@ fun HomeScreen(onStartTestClick: () -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // Placeholder for App Icon
-            val appIconPainter: Painter = painterResource(id = R.drawable.ic_launcher_foreground) // Replace with your actual app icon
+            // Placeholder 
+            val appIconPainter: Painter = painterResource(id = R.drawable.ic_launcher_foreground) 
             Image(
                 painter = appIconPainter,
                 contentDescription = "App Icon",
                 modifier = Modifier
-                    .size(120.dp) // Adjust size as needed
+                    .size(120.dp) 
                     .padding(bottom = 32.dp),
                 contentScale = ContentScale.Fit
             )
@@ -50,8 +50,5 @@ fun HomeScreen(onStartTestClick: () -> Unit) {
 @Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview() {
-    // You might need to wrap this in your app's theme for accurate preview
-    // PrjctMovmntTheme { // Assuming you have a theme defined
     HomeScreen(onStartTestClick = {})
-    // }
 }
